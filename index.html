@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Today practice</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *{
+
+        }
+        body{
+            background-color:aliceblue;
+        }
+        .header{
+            text-align: center;
+        }
+        .skill-container{
+            background-color: antiquewhite;
+            width:360px;
+            height:500px;
+            margin:50px auto;
+            box-shadow: 2px 3px 5px blue;
+           
+            
+        }
+        .skill-container:hover{
+            box-shadow: 5px 7px 25px blue;
+        }
+        
+        .skill-container li{
+            margin:50px 6px;
+            position:relative;
+            list-style-type: none;
+            left: 0px;
+        }
+        .skill-container li::before{
+             content: '';
+             height:25px;
+             width:100%;
+             background-color: white;
+             position: absolute;
+             top:calc(100% + 5px);
+             border-radius: 1000px;
+             left: 0px;
+        }
+        .skill-container .html::after{
+             content: '90%';
+             text-align: center;
+             height:25px;
+             width:0;
+             background-color:yellow;
+             position: absolute;
+             top:calc(100% + 5px);
+             border-radius: 1000px;
+             left:0px;
+             animation-duration: 2s;
+             animation-fill-mode: forwards;
+             animation-name: html;
+        }
+        @keyframes html {
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: blue;
+            }
+            to{
+                width: 90%;
+            }
+        }
+        .skill-container .css::after{
+             content: '50%';
+             text-align: center;
+             height:25px;
+             width:0;
+             background-color:yellow;
+             position: absolute;
+             top:calc(100% + 5px);
+             border-radius: 1000px;
+             left:0px;
+             animation-duration: 2s;
+             animation-fill-mode: forwards;
+             animation-name:css;
+        }
+        @keyframes css {
+            from{
+                background-color: red;
+            }
+            to{
+                width:50%;
+                background-color: blue;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Biswas Rahman
+        </h1>
+    </div>
+
+    <div class="skill-container">
+        <ol>
+            <br>
+            <li class="html">html</li>
+            <li class="css">css</li>
+            <li class="boot">bootstrap</li>
+            <li class="js">js</li>
+            <li class="java">java</li>
+            <li class="cplus">c++</li>
+        </ol>
+    </div>
+    
+</body>
+</html>
